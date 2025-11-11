@@ -159,7 +159,7 @@ export default function MyHeader() {
             <ForumS />
           </div>
           <a 
-            href="#" 
+            href="/auth/signin" 
             className="flex items-center space-x-2 text-white hover:text-white/80 transition-colors duration-200 py-2 px-4 rounded-lg hover:bg-white/10 w-full justify-center"
           >
             <span>Sign up</span>

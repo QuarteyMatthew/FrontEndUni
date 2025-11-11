@@ -21,25 +21,25 @@ export default function BodySignIn() {
             {/* Header rimane uguale - gestito da MyHeader */}
             
             {/* Contenuto principale */}
-            <div className="flex-1 flex items-center justify-center px-4 py-12">
-                <div className="w-full max-w-md">
+            <div className="flex-1 flex items-center justify-center px-3 sm:px-4 py-8 sm:py-12">
+                <div className="w-full max-w-xs sm:max-w-sm md:max-w-md">
                     {/* Card di login */}
-                    <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm">
+                    <div className="bg-white rounded-2xl border border-gray-200 p-5 sm:p-6 md:p-8 shadow-sm">
                         {/* Titolo */}
-                        <div className="mb-8">
-                            <h1 className="text-3xl font-serif font-bold text-black">
+                        <div className="mb-6 sm:mb-8">
+                            <h1 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-black">
                                 Accedi
                             </h1>
-                            <p className="text-gray-600 text-sm mt-2">
+                            <p className="text-gray-600 text-xs sm:text-sm md:text-base mt-2">
                                 Entra nel tuo account UniTogether
                             </p>
                         </div>
 
                         {/* Form */}
-                        <form onSubmit={handleSubmit} className="space-y-6">
+                        <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                             {/* Email Input */}
                             <div>
-                                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                                <label htmlFor="email" className="block text-xs sm:text-sm font-medium text-gray-700 mb-2">
                                     Email
                                 </label>
                                 <input
@@ -48,14 +48,14 @@ export default function BodySignIn() {
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     placeholder="tua.email@universita.it"
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--cherry-red)] focus:border-transparent transition-all duration-200"
+                                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg text-sm sm:text-base text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--cherry-red)] focus:border-transparent transition-all duration-200"
                                     required
                                 />
                             </div>
 
                             {/* Password Input */}
                             <div>
-                                <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+                                <label htmlFor="password" className="block text-xs sm:text-sm font-medium text-gray-700 mb-2">
                                     Password
                                 </label>
                                 <div className="relative">
@@ -65,7 +65,7 @@ export default function BodySignIn() {
                                         value={password}
                                         onChange={(e) => setPassword(e.target.value)}
                                         placeholder="La tua password"
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--cherry-red)] focus:border-transparent transition-all duration-200"
+                                        className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg text-sm sm:text-base text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--cherry-red)] focus:border-transparent transition-all duration-200"
                                         required
                                     />
                                     <button
@@ -91,52 +91,52 @@ export default function BodySignIn() {
                             {/* Submit Button */}
                             <button
                                 type="submit"
-                                className="w-full bg-black text-white font-semibold py-3 px-4 rounded-lg hover:bg-gray-800 transition-colors duration-200 mt-8"
+                                className="w-full bg-black text-white font-semibold py-2 sm:py-3 px-4 rounded-lg hover:bg-gray-800 transition-colors duration-200 mt-6 sm:mt-8 text-sm sm:text-base"
                             >
                                 Accedi
                             </button>
                         </form>
 
                         {/* Link Password Dimenticata */}
-                        <div className="mt-6 text-center">
+                        <div className="mt-4 sm:mt-6 text-center">
                             <button
                                 onClick={handleForgotPassword}
-                                className="text-sm text-gray-600 hover:text-[var(--cherry-red)] underline transition-colors duration-200"
+                                className="text-xs sm:text-sm text-gray-600 hover:text-[var(--cherry-red)] underline transition-colors duration-200"
                             >
                                 Password Dimenticata?
                             </button>
                         </div>
 
                         {/* Divider */}
-                        <div className="my-8 relative">
+                        <div className="my-6 sm:my-8 relative">
                             <div className="absolute inset-0 flex items-center">
                                 <div className="w-full border-t border-gray-300" />
                             </div>
-                            <div className="relative flex justify-center text-sm">
+                            <div className="relative flex justify-center text-xs sm:text-sm">
                                 <span className="px-2 bg-white text-gray-500">oppure</span>
                             </div>
                         </div>
 
                         {/* Sign up link */}
-                        <p className="text-center text-sm text-gray-600">
+                        <p className="text-center text-xs sm:text-sm text-gray-600">
                             Non hai un account?{" "}
-                            <a href="#" className="font-semibold text-[var(--cherry-red)] hover:underline transition-colors duration-200">
+                            <a href="/auth/signup" className="font-semibold text-[var(--cherry-red)] hover:underline transition-colors duration-200">
                                 Registrati qui
                             </a>
                         </p>
                     </div>
 
                     {/* Social login option (opzionale) */}
-                    <div className="mt-8 text-center text-sm text-gray-500">
+                    <div className="mt-6 sm:mt-8 text-center text-xs sm:text-sm text-gray-500">
                         <p>Continua con i tuoi account social</p>
-                        <div className="flex justify-center gap-4 mt-4">
-                            <button className="p-3 rounded-full bg-white border border-gray-300 hover:bg-gray-50 transition-colors duration-200" aria-label="Accedi con Google">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="size-6">
+                        <div className="flex justify-center gap-3 sm:gap-4 mt-3 sm:mt-4">
+                            <button className="p-2 sm:p-3 rounded-full bg-white border border-gray-300 hover:bg-gray-50 transition-colors duration-200" aria-label="Accedi con Google">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="size-5 sm:size-6">
                                     <text x="12" y="18" fontSize="20" fontWeight="bold" textAnchor="middle" fill="#1f2937">G</text>
                                 </svg>
                             </button>
-                            <button className="p-3 rounded-full bg-white border border-gray-300 hover:bg-gray-50 transition-colors duration-200" aria-label="Accedi con Apple">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="size-6">
+                            <button className="p-2 sm:p-3 rounded-full bg-white border border-gray-300 hover:bg-gray-50 transition-colors duration-200" aria-label="Accedi con Apple">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="size-5 sm:size-6">
                                     <text x="12" y="18" fontSize="20" fontWeight="bold" textAnchor="middle" fill="#1f2937">🍎</text>
                                 </svg>
                             </button>
@@ -146,7 +146,7 @@ export default function BodySignIn() {
             </div>
 
             {/* Footer o spazio vuoto */}
-            <div className="py-4 border-t border-gray-200 text-center text-xs text-gray-500">
+            <div className="py-3 sm:py-4 border-t border-gray-200 text-center text-xs text-gray-500">
                 <p>&copy; 2025 UniTogether. Tutti i diritti riservati.</p>
             </div>
         </div>

@@ -1,14 +1,13 @@
 "use client";
 import MyHeader from '@/app/components/Assets/MyHeader';
 import MyFooter from '@/app/components/Assets/MyFooter';
-import BodySignIn from '@/app/bodys/bodysignin';
+import BodySignUp from '@/app/bodys/bodysignup';
 
-
-export default function SignInPage() {
+export default function SignUpPage() {
   return (
-    <div className="" style={{fontFamily : "var(--font-geist-mono)"}}>
+    <div className="">
       <MyHeader />
-      <BodySignIn />
+      <BodySignUp />
       <MyFooter />
     </div>
   );
