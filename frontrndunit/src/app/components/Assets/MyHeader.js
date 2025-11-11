@@ -7,22 +7,26 @@ export default function MyHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-(--cherry-red) text-white">
-      <div className="flex items-center justify-between px-4 md:px-8">
+    <header className=" top-0 left-0 w-full bg-[var(--cherry-red)] text-white z-50">
+      <div className="max-w-screen-xl mx-auto flex items-center justify-between px-4 md:px-8 h-20">
         {/* SEZIONE SINISTRA: logo + link principali */}
         <div className="flex items-center space-x-6">
-          <img
-            className="Logo"
-            src="o-removebg-preview.png"
-            alt="Logo"
-            width={95}
-          />
-          <p
-            className="text-White text-2xl"
-            style={{ fontFamily: "var(--font-geist-mono)" }}
+          <a 
+          className="flex items-center"
+            href="/"
           >
-            <span className="text-black">Uni</span>Togheter!
-          </p>
+            <img
+              className="h-12 w-auto"
+              src="/o-removebg-preview.png"
+              alt="Logo"
+            />
+            <p
+              className="text-white text-2xl"
+              style={{ fontFamily: "var(--font-geist-mono)" }}
+            >
+              <span className="text-black">Uni</span>Togheter!
+            </p>
+          </a>
 
           {/* Link visibili solo su desktop */}
           <nav className="hidden md:flex items-center space-x-8 ml-6">
@@ -63,7 +67,7 @@ export default function MyHeader() {
         {/* SEZIONE DESTRA: form search + signup */}
         <div className="hidden md:flex items-center space-x-8">
           <ForumS />
-          <a href="#" className="flex items-center space-x-2 whitespace-nowrap">
+          <a href="/auth/signin" className="flex items-center space-x-2 whitespace-nowrap hover:opacity-80 transition-opacity duration-200">
             <span>Sign up</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
